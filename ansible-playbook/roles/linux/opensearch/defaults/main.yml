@@ -12,11 +12,11 @@ os_master_nodes: |-
 
 populate_inventory_to_hosts_file: true
 
-os_home: /usr/share/opensearch
-os_conf_dir: /usr/share/opensearch/config
-os_plugin_bin_path: /usr/share/opensearch/bin/opensearch-plugin
-os_sec_plugin_conf_path: /usr/share/opensearch/plugins/opensearch-security/securityconfig
-os_sec_plugin_tools_path: /usr/share/opensearch/plugins/opensearch-security/tools
+os_home: /home/opensearch
+os_conf_dir: /etc/opensearch/config
+os_plugin_bin_path: /usr/bin/opensearch-plugin
+os_sec_plugin_conf_path: /etc/opensearch/opensearch-security/securityconfig
+os_sec_plugin_tools_path: /srv/opensearch/plugins/opensearch-security/tools
 os_api_port: 9200
 
 systemctl_path: /etc/systemd/system
