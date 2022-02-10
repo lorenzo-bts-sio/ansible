@@ -12,6 +12,19 @@
     https_proxy: http://proxy.xelians.local:8080
   register: download
 
+- name: Java Install | Download Java {{ os_version }}
+  get_url:
+    url: "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245795_df5ad55fdd604472a86a45a217032c7d"
+    dest: "/tmp/jre-8u321-linux-i586.tar.gz" 
+  environment:
+    http_proxy: http://proxy.xelians.local:8080
+    https_proxy: http://proxy.xelians.local:8080
+  register: download
+
+- name: Java Install | 
+  command: chdir=/tmp/ tar -xvzf jre-8u321-linux-i586.tar.gz -C "{{ os_home }}" --strip-components=1
+  when: download.changed
+
 - name: OpenSearch Install | Create opensearch user
   user:
     name: "{{ os_user }}"
