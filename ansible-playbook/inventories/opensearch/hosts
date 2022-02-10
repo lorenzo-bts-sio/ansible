@@ -1,0 +1,33 @@
+Q-LXAROSEM01-D1 ansible_host=10.10.184.2  ansible_user=admin ip=10.10.184.2 roles=master
+Q-LXAROSEM02-D2 ansible_host=10.10.184.3  ansible_user=admin ip=10.10.184.3 roles=master
+Q-LXAROSEM03-D1 ansible_host=10.10.184.4  ansible_user=admin ip=10.10.184.4 roles=master
+
+Q-LXAROSED01-D1  ansible_host=10.10.184.8  ansible_user=admin ip=10.10.184.8 roles=ingest
+Q-LXAROSED02-D2  ansible_host=10.10.184.9  ansible_user=admin ip=10.10.184.9 roles=ingest
+
+
+#logstash1  ansible_host=10.10.184.2  ansible_user=admin ip=10.10.184.6 roles=ingest
+#logstash2  ansible_host=10.10.184.2  ansible_user=admin ip=10.10.184.7 roles=ingest
+
+Q-LXAROSEK01-D1 ansible_host=10.10.184.5  ansible_user=admin ip=10.10.184.5
+
+# List all the nodes in the os cluster
+[os-cluster]
+Q-LXAROSEM01-D1
+Q-LXAROSEM02-D2
+Q-LXAROSEM03-D1
+Q-LXAROSED01-D1
+Q-LXAROSED02-D2
+
+
+
+# List all the Master eligible nodes under this group
+[master]
+Q-LXAROSEM01-D1
+Q-LXAROSEM02-D2
+Q-LXAROSEM03-D1
+
+
+[dashboards]
+Q-LXAROSEK01-D1
+

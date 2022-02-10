@@ -1,0 +1,30 @@
+## Common opensearch configuration parameters ##
+
+os_cluster_name: Xelians-Cluster-Opensearch
+
+# opensearch download
+os_download_url:
+
+# opensearch version
+os_version: "1.2.4"
+
+# opensearch dashboards version
+os_dashboards_version: "1.2.0"
+
+# Configure hostnames for opensearch nodes
+# It is required to configure SSL
+# Example es1.example.com, es2.example.com
+domain_name: xelians.local
+
+# Java memory heap values(GB) for opensearch
+# You can change it based on server specs
+xms_value: 2
+xmx_value: 2
+
+# Cluster type whether its single node or multi-node
+cluster_type: multi-node
+
+# opensearch user info
+os_user: opensearch
+
+os_dashboards_user: opensearch
