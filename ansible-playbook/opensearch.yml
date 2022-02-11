@@ -11,3 +11,10 @@
   gather_facts: true
   roles:
     - { role: linux/dashboards }
+
+
+- name: opensearch logstash installation & configuration
+  hosts: logstash
+  gather_facts: true
+  roles:
+    - { role: linux/logstash }

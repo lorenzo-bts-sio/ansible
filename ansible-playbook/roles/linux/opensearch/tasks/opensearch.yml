@@ -12,13 +12,6 @@
     https_proxy: http://proxy.xelians.local:8080
   register: download
 
-#- name: Java Install | 
-#  command: yum install -y java 
-#  environment:
-#    http_proxy: http://proxy.xelians.local:8080
-#    https_proxy: http://proxy.xelians.local:8080
-#  when: download
-
 - name: OpenSearch Install | Create opensearch user
   user:
     name: "{{ os_user }}"
